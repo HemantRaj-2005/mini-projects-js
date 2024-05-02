@@ -1,0 +1,126 @@
+/* Resetting default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Styling the body with a background color */
+body {
+    background: #262a2f;
+}
+
+/* Styling the container to center it on the screen */
+.container {
+    max-width: 400px; /* Maximum width of the container */
+    width: 90%; /* 90% of the available width */
+    margin: auto; /* Centering the container horizontally */
+    padding: 25px 35px; /* Padding inside the container */
+    background: #fff; /* Background color of the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+    position: absolute; /* Positioning */
+    top: 50%; /* Centering vertically */
+    left: 50%; /* Centering horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+}
+
+/* Styling paragraph elements inside the container */
+.container p {
+    font-weight: 600; /* Bold font weight */
+    font-size: 15px; /* Font size */
+    margin-bottom: 8px; /* Bottom margin */
+}
+
+/* Styling input fields inside the container */
+.container input {
+    width: 100%; /* Full width */
+    height: 50px; /* Height */
+    border: 1px solid #494eea; /* Border */
+    outline: 0; /* Remove outline */
+    padding: 10px; /* Padding */
+    margin: 10px 0 20px; /* Margin */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover effect on input fields */
+.container input:hover {
+    border-color: #6c63ff; /* Change border color on hover */
+}
+
+/* Styling buttons inside the container */
+.container button {
+    width: 100%; /* Full width */
+    height: 50px; /* Height */
+    border: none; /* No border */
+    background-color: #494eea; /* Background color */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    font-weight: 600; /* Font weight */
+    cursor: pointer; /* Cursor style */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition effect for background color */
+}
+
+/* Hover effect on buttons */
+.container button:hover {
+    background-color: #6c63ff; /* Change background color on hover */
+}
+
+/* Styling the image box */
+#imgBox {
+    width: 200px; /* Width of the image box */
+    border-radius: 5px; /* Rounded corners */
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 1s; /* Transition effect for height */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Styling images inside the image box */
+#imgBox img {
+    width: 100px; /* Width of the image */
+    padding: 10px; /* Padding around the image */
+    display: block; /* Ensure image is block-level element */
+    margin: auto; /* Center the image */
+}
+
+
+/* Showing the image box */
+#imgBox.show-img {
+    max-height: 300px; /* Maximum height when shown */
+    margin: 10px auto; /* Centering horizontally with margin */
+    border: 1px solid #d1d1d1; /* Border */
+}
+
+.error{
+    animation: shake 0.5s linear;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-6px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(6px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Adjusted maximum width for smaller screens */
+    }
+}
